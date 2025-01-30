@@ -62,13 +62,23 @@ sudo systemctl restart elasticsearch
 ![5](https://github.com/Foxbeerxxx/elk/blob/main/img/img5.png)`
 
 3. `Запускаю и проверяю статус`
-![5](https://github.com/Foxbeerxxx/elk/blob/main/img/img5.png)`
+![6](https://github.com/Foxbeerxxx/elk/blob/main/img/img6.png)`
+
+4. `Захожу http://localhost:5601/ `
+
+![7](https://github.com/Foxbeerxxx/elk/blob/main/img/img7.png)`
+
+
+5. `Захожу в devtools и выполняю код`
+``` 
+ GET /_cluster/health?pretty
+
+``` 
+![8](https://github.com/Foxbeerxxx/elk/blob/main/img/img8.png)`
 
 
 
 
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
 6. 
 
 ```
