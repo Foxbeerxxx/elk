@@ -26,17 +26,26 @@ sudo apt install -y elasticsearch
 ![1](https://github.com/Foxbeerxxx/elk/blob/main/img/img1.png)`
 
 
-4. `Заполните здесь этапы выполнения, если требуется ....`
-5. `Заполните здесь этапы выполнения, если требуется ....`
-6. 
+4. `Меняю конфигурацию файла`
+```
+sudo nano /etc/elasticsearch/elasticsearch.yml
 
 ```
-Поле для вставки кода...
-....
-....
-....
-....
+![2](https://github.com/Foxbeerxxx/elk/blob/main/img/img2.png)`
+
+5. `Перезагружаем сервис`
+
 ```
+sudo systemctl restart elasticsearch
+
+```
+6. `И пробуем обращаться через curl на локал хост по порту 9200`
+
+```
+ curl -X GET 'localhost:9200/_cluster/health?pretty'    
+
+```
+![3](https://github.com/Foxbeerxxx/elk/blob/main/img/img3.png)`
 
 `При необходимости прикрепитe сюда скриншоты
 
