@@ -136,7 +136,7 @@ sudo nano /etc/filebeat/filebeat.yml
      setup.kibana:
       host: "http://localhost:5601"  
 ```
-5. `Захожу на Кабаны`
+5. `Перезапускаю сервис , Захожу на Кабаны`
 ```
 http://localhost:5601
 ```
