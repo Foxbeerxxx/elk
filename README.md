@@ -47,19 +47,26 @@ sudo systemctl restart elasticsearch
 ```
 ![3](https://github.com/Foxbeerxxx/elk/blob/main/img/img3.png)`
 
-`При необходимости прикрепитe сюда скриншоты
-
-
-
 ---
 
-### Задание 2
+### Задание 2 Kibana
 
-`Приведите ответ в свободной форме........`
+1. `Устанавливаю Kibana`
+![4](https://github.com/Foxbeerxxx/elk/blob/main/img/img4.png)`
 
-1. `Заполните здесь этапы выполнения, если требуется ....`
-2. `Заполните здесь этапы выполнения, если требуется ....`
-3. `Заполните здесь этапы выполнения, если требуется ....`
+
+2. `Редактирую конф файл `
+```
+  sudo nano /etc/kibana/kibana.yml
+```  
+![5](https://github.com/Foxbeerxxx/elk/blob/main/img/img5.png)`
+
+3. `Запускаю и проверяю статус`
+![5](https://github.com/Foxbeerxxx/elk/blob/main/img/img5.png)`
+
+
+
+
 4. `Заполните здесь этапы выполнения, если требуется ....`
 5. `Заполните здесь этапы выполнения, если требуется ....`
 6. 
