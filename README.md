@@ -92,7 +92,8 @@ sudo apt install logstash
 3. `После продолжительного ТЫКания, добаляю метрику`
 ![12](https://github.com/Foxbeerxxx/elk/blob/main/img/img12.png)`
 
-
+4. `Discover высвечивается нужная метрика, но как в лекции по времени классифицивароть то зависает выбрасывает`
+![13](https://github.com/Foxbeerxxx/elk/blob/main/img/img13.png)`
 
 ### Задание 4 Filebeat
 
@@ -106,7 +107,32 @@ sudo apt install filebeat
 
 `Пробую перезагрузить сервис sudo systemctl restart elasticsearch
 , не поммогает, перезагружаю хост целиком `
-`Вроде снова стал работать `
+`Ничего не помогло`
 3. `Редкатирую конф файл `
 ```
 sudo nano /etc/filebeat/filebeat.yml
+```
+3.1. `Проверяю статус`
+```
+  sudo systemctl start filebeat
+```
+![14](https://github.com/Foxbeerxxx/elk/blob/main/img/img14.png)`
+
+
+4. `Описываю здесь работу по лекции , так как сервис лег целиком, видимо из за моего старенького Sony`
+
+`Основные изменения в конфигурации:`
+` filebeat.inputs: Настройте вход для логов Nginx. Укажите пути к файлам логов. Обычно это /var/log/nginx/access.log и /var/log/nginx/error.log`
+
+```
+   filebeat.inputs:
+     - type: log
+       enabled: true
+       paths:
+         - /var/log/nginx/access.log
+         - /var/log/nginx/error.log
+       tags: ["nginx"]
+     
+     setup.kibana:
+      host: "http://localhost:5601"  
+```
