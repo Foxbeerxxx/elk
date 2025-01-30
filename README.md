@@ -136,3 +136,10 @@ sudo nano /etc/filebeat/filebeat.yml
      setup.kibana:
       host: "http://localhost:5601"  
 ```
+5. `Захожу на Кабаны`
+```
+http://localhost:5601
+```
+`Переход в Discover: В левом меню выберите "Discover"`
+`В левом верхнем углу (где написано kibana_sample_data_logs или что-то подобное) `выбераю индекс filebeat-*. Elasticsearch создаст индекс и Filebeat начнет отправлять данные.`
+`В главном окне Discover  должны увидеть логи Nginx, отправленные Filebeat, `отфильтрованные по тегу nginx (как мы прописали в конфигурации) .`
