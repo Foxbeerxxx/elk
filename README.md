@@ -119,27 +119,7 @@ sudo nano /etc/filebeat/filebeat.yml
 ![14](https://github.com/Foxbeerxxx/elk/blob/main/img/img14.png)`
 
 
-4. `Описываю здесь работу по лекции , так как сервис лег целиком, видимо из за моего старенького Sony`
+4. `Переустановил все на другом хосте`
 
-`Основные изменения в конфигурации:`
-` filebeat.inputs: Настройте вход для логов Nginx. Укажите пути к файлам логов. Обычно это /var/log/nginx/access.log и /var/log/nginx/error.log`
-
-```
-   filebeat.inputs:
-     - type: log
-       enabled: true
-       paths:
-         - /var/log/nginx/access.log
-         - /var/log/nginx/error.log
-       tags: ["nginx"]
-     
-     setup.kibana:
-      host: "http://localhost:5601"  
-```
-5. `Перезапускаю сервис , Захожу на Кабаны`
-```
-http://localhost:5601
-```
-`Переход в Discover: В левом меню выберите "Discover"`
-`В левом верхнем углу (где написано kibana_sample_data_logs или что-то подобное) `выбераю индекс filebeat-*. Elasticsearch создаст индекс и Filebeat начнет отправлять данные.`
-`В главном окне Discover  должны увидеть логи Nginx, отправленные Filebeat, `отфильтрованные по тегу nginx (как мы прописали в конфигурации) .`
+`Произвел все монипуляуии в discovery высветились данные`
+![15](https://github.com/Foxbeerxxx/elk/blob/main/img/img15.png)`
